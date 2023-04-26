@@ -8,7 +8,7 @@ def login_page(request):
     form = forms.LoginForm()
     message =''
     if request.method == 'POST':
-        form = forms.LoginForm(request.Post)
+        form = forms.LoginForm(request.POST)
         if form.is_valid():
             user = authenticate(
                 username = form.cleaned_data['username'],
