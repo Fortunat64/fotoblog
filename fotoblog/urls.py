@@ -33,6 +33,7 @@ urlpatterns = [
         template_name = 'authentication/password_change_done.html'
     ), name='password_change_done'),
     path('signup/', authentication.views.signup_page, name='signup' ),
+    path('photo_profile/change', authentication.views.upload_profile_photo, name='Change_Profile_Photo'),
     path('home/', blog.views.home, name='home'),
     path('photo/upload/', blog.views.photo_upload, name='photo_upload')
 ]
